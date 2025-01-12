@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      var age = 10;
+      // declare a person instance with Object
+      var person = new Object();
+      // create atributes and methods for the person
+      person.name = "John Doe";
+      person.age = 30;
+      person.city = "New York";
+      person.getInfo = function () {
+        // you'd better use this. to get the inner attributes of person avoid getting the var from outside.
+        console.log(
+          "name: " + this.name + " age: " + this.age + " age: " + this.age
+        );
+      };
+
+      console.log(person.getInfo());
+
+      var person1 = {
+        name: "Jane Doe",
+        age: 25,
+        city: "Los Angeles",
+        getInfo: function () {
+          console.log(
+            "name: " + this.name + " age: " + this.age + " age: " + this.age
+          );
+        },
+      };
+
+      console.log(person1.getInfo());
+    </script>
+  </head>
+  <body></body>
+</html>
